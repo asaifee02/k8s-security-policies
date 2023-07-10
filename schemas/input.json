@@ -1,0 +1,399 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+      "kind",
+      "request"
+  ],
+  "properties": {
+      "kind": {
+          "type": "string",
+          "default": "",
+          "title": "The kind Schema",
+          "examples": [
+              "AdmissionReview"
+          ]
+      },
+      "request": {
+          "type": "object",
+          "default": {},
+          "title": "The request Schema",
+          "required": [
+              "uid",
+              "kind",
+              "resource",
+              "subResource",
+              "requestKind",
+              "requestResource",
+              "requestSubResource",
+              "name",
+              "namespace",
+              "operation",
+              "userInfo",
+              "object",
+              "oldObject",
+              "options",
+              "dryRun"
+          ],
+          "properties": {
+              "uid": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The uid Schema",
+                  "examples": [
+                      "705ab4f5-6393-11e8-b7cc-42010a800002"
+                  ]
+              },
+              "kind": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The kind Schema",
+                  "required": [
+                      "group",
+                      "version",
+                      "kind"
+                  ],
+                  "properties": {
+                      "group": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The group Schema",
+                          "examples": [
+                              "autoscaling"
+                          ]
+                      },
+                      "version": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The version Schema",
+                          "examples": [
+                              "v1"
+                          ]
+                      },
+                      "kind": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The kind Schema",
+                          "examples": [
+                              "Scale"
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "group": "autoscaling",
+                      "version": "v1",
+                      "kind": "Scale"
+                  }]
+              },
+              "resource": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The resource Schema",
+                  "required": [
+                      "group",
+                      "version",
+                      "resource"
+                  ],
+                  "properties": {
+                      "group": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The group Schema",
+                          "examples": [
+                              "apps"
+                          ]
+                      },
+                      "version": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The version Schema",
+                          "examples": [
+                              "v1"
+                          ]
+                      },
+                      "resource": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The resource Schema",
+                          "examples": [
+                              "deployments"
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "group": "apps",
+                      "version": "v1",
+                      "resource": "deployments"
+                  }]
+              },
+              "subResource": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The subResource Schema",
+                  "examples": [
+                      "scale"
+                  ]
+              },
+              "requestKind": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The requestKind Schema",
+                  "required": [
+                      "group",
+                      "version",
+                      "kind"
+                  ],
+                  "properties": {
+                      "group": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The group Schema",
+                          "examples": [
+                              "autoscaling"
+                          ]
+                      },
+                      "version": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The version Schema",
+                          "examples": [
+                              "v1"
+                          ]
+                      },
+                      "kind": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The kind Schema",
+                          "examples": [
+                              "Scale"
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "group": "autoscaling",
+                      "version": "v1",
+                      "kind": "Scale"
+                  }]
+              },
+              "requestResource": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The requestResource Schema",
+                  "required": [
+                      "group",
+                      "version",
+                      "resource"
+                  ],
+                  "properties": {
+                      "group": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The group Schema",
+                          "examples": [
+                              "apps"
+                          ]
+                      },
+                      "version": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The version Schema",
+                          "examples": [
+                              "v1"
+                          ]
+                      },
+                      "resource": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The resource Schema",
+                          "examples": [
+                              "deployments"
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "group": "apps",
+                      "version": "v1",
+                      "resource": "deployments"
+                  }]
+              },
+              "requestSubResource": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The requestSubResource Schema",
+                  "examples": [
+                      "scale"
+                  ]
+              },
+              "name": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The name Schema",
+                  "examples": [
+                      "my-deployment"
+                  ]
+              },
+              "namespace": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The namespace Schema",
+                  "examples": [
+                      "my-namespace"
+                  ]
+              },
+              "operation": {
+                  "type": "string",
+                  "default": "",
+                  "title": "The operation Schema",
+                  "examples": [
+                      "UPDATE"
+                  ]
+              },
+              "userInfo": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The userInfo Schema",
+                  "required": [
+                      "username",
+                      "uid",
+                      "groups",
+                      "extra"
+                  ],
+                  "properties": {
+                      "username": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The username Schema",
+                          "examples": [
+                              "admin"
+                          ]
+                      },
+                      "uid": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The uid Schema",
+                          "examples": [
+                              "014fbff9a07c"
+                          ]
+                      },
+                      "groups": {
+                          "type": "array",
+                          "default": [],
+                          "title": "The groups Schema",
+                          "items": {
+                              "type": "string",
+                              "title": "A Schema",
+                              "examples": [
+                                  "system:authenticated",
+                                  "my-admin-group"
+                              ]
+                          },
+                          "examples": [
+                              ["system:authenticated",
+                                  "my-admin-group"
+                              ]
+                          ]
+                      },
+                      "extra": {
+                          "type": "object",
+                          "default": {},
+                          "title": "The extra Schema",
+                          "required": [
+                              "some-key"
+                          ],
+                          "properties": {
+                              "some-key": {
+                                  "type": "array",
+                                  "default": [],
+                                  "title": "The some-key Schema",
+                                  "items": {
+                                      "type": "string",
+                                      "title": "A Schema",
+                                      "examples": [
+                                          "some-value1",
+                                          "some-value2"
+                                      ]
+                                  },
+                                  "examples": [
+                                      ["some-value1",
+                                          "some-value2"
+                                      ]
+                                  ]
+                              }
+                          },
+                          "examples": [{
+                              "some-key": [
+                                  "some-value1",
+                                  "some-value2"
+                              ]
+                          }]
+                      }
+                  },
+                  "examples": [{
+                      "username": "admin",
+                      "uid": "014fbff9a07c",
+                      "groups": [
+                          "system:authenticated",
+                          "my-admin-group"
+                      ],
+                      "extra": {
+                          "some-key": [
+                              "some-value1",
+                              "some-value2"
+                          ]
+                      }
+                  }]
+              },
+              "object": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The object Schema",
+                  "properties": {}
+              },
+              "oldObject": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The oldObject Schema",
+                  "properties": {}
+              },
+              "options": {
+                  "type": "object",
+                  "default": {},
+                  "title": "The options Schema",
+                  "required": [
+                      "apiVersion",
+                      "kind"
+                  ],
+                  "properties": {
+                      "apiVersion": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The apiVersion Schema",
+                          "examples": [
+                              "meta.k8s.io/v1"
+                          ]
+                      },
+                      "kind": {
+                          "type": "string",
+                          "default": "",
+                          "title": "The kind Schema",
+                          "examples": [
+                              "UpdateOptions"
+                          ]
+                      }
+                  }
+              },
+              "dryRun": {
+                  "type": "boolean",
+                  "default": false,
+                  "title": "The dryRun Schema",
+                  "examples": [
+                      false
+                  ]
+              }
+          }
+      }
+  }
+}

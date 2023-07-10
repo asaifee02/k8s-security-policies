@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+      "kind",
+      "apiVersion",
+      "stdin",
+      "stdout",
+      "tty",
+      "container",
+      "command"
+  ],
+  "properties": {
+      "kind": {
+          "type": "string",
+          "default": "",
+          "title": "The kind Schema"
+      },
+      "apiVersion": {
+          "type": "string",
+          "default": "",
+          "title": "The apiVersion Schema"
+      },
+      "stdin": {
+          "type": "boolean",
+          "default": false,
+          "title": "The stdin Schema"
+      },
+      "stdout": {
+          "type": "boolean",
+          "default": false,
+          "title": "The stdout Schema"
+      },
+      "tty": {
+          "type": "boolean",
+          "default": false,
+          "title": "The tty Schema"
+      },
+      "container": {
+          "type": "string",
+          "default": "",
+          "title": "The container Schema"
+      },
+      "command": {
+          "type": "array",
+          "default": [],
+          "title": "The command Schema",
+          "items": {
+              "type": "string",
+              "default": "",
+              "title": "A Schema"
+          }
+      }
+  }
+}
